@@ -43,7 +43,7 @@
             bindings = <
 &kp GRAVE        &kp F1    &kp F2     &kp F3     &kp F4         &kp F5           &kp F6     &kp F7  &kp F8  &kp F9  &kp F10    &kp F11  &kp F12  &kp DEL  &kp DEL
 &rgb_ug RGB_EFR  &kp HOME  &kp UP     &kp END    &kp PAGE_UP    &kp PRINTSCREEN  &trans     &trans  &trans  &trans  &trans     &trans   &trans            &trans
-&rgb_ug RGB_EFF  &kp LEFT  &kp DOWN   &kp RIGHT  &kp PAGE_DOWN  &trans           &trans     &trans  &trans  &trans  &trans     &trans                     &trans
+&rgb_ug RGB_EFF  &kp LEFT  &kp DOWN   &kp RIGHT  &kp PAGE_DOWN  &kp CAPS         &trans     &trans  &trans  &trans  &trans     &trans                     &trans
 &trans                     &kp LC(Z)  &kp LC(X)  &kp LC(C)      &kp LC(V)        &kp LC(B)  &trans  &trans  &trans  &trans     &trans   &trans            &trans
 &trans           &trans               &trans                                     &trans                             &kp PSCRN  &trans   &trans            &mo 2
             >;
@@ -69,22 +69,14 @@
 
         layer_3 {
             bindings = <
-&trans  &trans        &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans         &trans         &trans  &trans
-&trans  &kp LS(N1)    &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &kp LS(EQUAL)          &kp BACKSPACE
-&trans  &kp NUMBER_1  &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS                             &kp EQUAL
-&trans                &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans         &trans                 &trans
-&trans  &trans                    &trans                              &trans                                          &trans      &trans         &trans                 &trans
+&trans  &trans        &trans      &trans          &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans         &trans         &trans  &trans
+&trans  &kp LS(N1)    &kp LS(N2)  &kp LS(N3)      &kp LS(N4)      &kp LS(N5)      &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &kp LS(EQUAL)          &kp BACKSPACE
+&trans  &kp NUMBER_1  &kp N2      &kp N3          &kp N4          &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS                             &kp EQUAL
+&trans                &trans      &kp LS(LA(N0))  &kp LA(LS(N9))  &kp LA(LS(N8))  &trans      &trans      &trans      &trans      &trans      &trans         &trans                 &trans
+&trans  &trans                    &trans                                          &trans                                          &trans      &trans         &trans                 &trans
             >;
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_bt {
-            timeout-ms = <50>;
-            key-positions = <61 62>;
-            bindings = <&mo 2>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 };
